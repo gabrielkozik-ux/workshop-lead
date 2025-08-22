@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workshop | Ochutnávka toho, co vás čeká</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Aplikace fontu Inter na celý web */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* Téměř černá pro moderní vzhled */
+            color: #f0f0f0; /* Lehce lomená bílá pro lepší čitelnost */
+        }
+        /* Vlastní gradient pro pozadí hrdiny */
+        .hero-gradient {
+            background: radial-gradient(ellipse at top, rgba(29, 78, 216, 0.15), transparent 70%),
+                        radial-gradient(ellipse at bottom, rgba(79, 70, 229, 0.15), transparent 70%);
+        }
+        /* Efekt pro karty */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigace -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-tighter text-white">AI Workshop</h1>
+            <a href="#kontakt" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300">Mám zájem</a>
+        </div>
+    </header>
+
+    <!-- Hlavní sekce (Hero) -->
+    <main class="pt-24">
+        <section class="hero-gradient min-h-screen flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-4 animate-fade-in-down">
+                    Revoluce v efektivitě? Jmenuje se AI.
+                </h2>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-300 mb-8">
+                    Objevte, jak umělá inteligence může transformovat vaši práci i osobní život. Toto je malá ochutnávka z mého AI workshopu, kde se z teorie stává praxe.
+                </p>
+                <a href="#co-je-ai" class="bg-white text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-200 transition-transform transform hover:scale-105">
+                    Prozkoumat možnosti
+                </a>
+            </div>
+        </section>
+
+        <!-- Sekce: Co je a co není AI -->
+        <section id="co-je-ai" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tighter">Než začneme: Co je a co není AI?</h3>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Pochopení základů je klíčové pro efektivní využití.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <!-- Karta 1: AI vs. Google -->
+                    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                            <h4 class="text-2xl font-bold">AI není Google</h4>
+                        </div>
+                        <p class="text-gray-300">
+                            Představte si Google jako <strong class="text-white">knihovníka</strong> – najde vám knihu, ale musíte si ji přečíst sami. Generativní AI je jako <strong class="text-white">koncipient</strong> – na základě vašeho zadání vytvoří zcela nový text, analýzu nebo návrh. Nehledá, ale tvoří.
+                        </p>
+                    </div>
+                    <!-- Karta 2: Halucinace a ověřování -->
+                    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+                        <div class="flex items-center mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                            <h4 class="text-2xl font-bold">Pozor na "halucinace"</h4>
+                        </div>
+                        <p class="text-gray-300">
+                            Cílem AI je odpovědět za každou cenu. Pokud si není jistá, informaci si <strong class="text-white">přesvědčivě vymyslí</strong>. Proto je klíčové všechny faktické výstupy, zejména v odborných oblastech jako právo či zdraví, <strong class="text-white">vždy ověřovat</strong>. Odpovědnost je na vás.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce: Praktické využití -->
+        <section id="vyuziti" class="py-20 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tighter">Od teorie k praxi: Co se naučíte?</h3>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Ukázky nástrojů a technik, které vám ušetří hodiny práce.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Karta: Hloubková analýza -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Hloubková analýza (Deep Research)</h4>
+                        <p class="text-gray-400">Získejte obsáhlou znalostní bázi z desítek zdrojů během pár minut. Ideální pro rešerše trhu, analýzu konkurence nebo přípravu podkladů.</p>
+                    </div>
+
+                    <!-- Karta: Tvorba webu -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Tvorba webových stránek</h4>
+                        <p class="text-gray-400">Nechte AI vygenerovat kód pro jednoduchý web jako je tento. Ukážu vám, jak ho zdarma umístit na internet s vlastní doménou.</p>
+                    </div>
+
+                    <!-- Karta: Integrace s Google Workspace -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Integrace s Google Workspace</h4>
+                        <p class="text-gray-400">Shrnutí nepřečtených emailů, automatické plánování v kalendáři nebo příprava odpovědí. Váš osobní asistent přímo v Gmailu.</p>
+                    </div>
+
+                    <!-- Karta: Notebook LM -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Notebook LM: Vaše soukromá knihovna</h4>
+                        <p class="text-gray-400">Vytvořte si znalostní bázi, která čerpá POUZE z vašich dat. Nahrávejte smlouvy, manuály či podcasty a získejte odpovědi bez rizika halucinací.</p>
+                    </div>
+
+                    <!-- Karta: Generování hudby -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Suno: Vlastní písnička na počkání</h4>
+                        <p class="text-gray-400">Složte originální píseň pro firemní prezentaci nebo jako netradiční přání k narozeninám. Stačí zadat text a styl.</p>
+                    </div>
+
+                    <!-- Karta: Prompt Engineering -->
+                    <div class="feature-card bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h4 class="text-xl font-bold mb-2">Optimalizace práce (Prompting)</h4>
+                        <p class="text-gray-400">Generický vstup = generický výstup. Naučte se, jak AI zadávat pokyny tak, abyste dostali přesně to, co potřebujete, a ušetřili si práci.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sekce: Kontakt / CTA -->
+        <section id="kontakt" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl md:text-4xl font-bold tracking-tighter mb-4">Jste připraveni začít?</h3>
+                <p class="max-w-2xl mx-auto text-lg text-gray-300 mb-8">
+                    Tohle byla jen malá ukázka. Na workshopu jdeme do hloubky a vše si prakticky vyzkoušíte. Zvyšte svou efektivitu a získejte náskok.
+                </p>
+                <button onclick="showContactInfo()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">
+                    Chci se přihlásit nebo se zeptat
+                </button>
+                <div id="contact-info" class="hidden mt-8 p-6 bg-gray-900 rounded-lg max-w-md mx-auto border border-gray-800">
+                    <p class="text-lg">Skvělá volba! Pro více informací o termínech workshopů nebo individuální konzultaci mě kontaktujte na:</p>
+                    <a href="mailto:vas.email@domena.cz" class="text-blue-400 text-xl font-bold mt-2 inline-block">vas.email@domena.cz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Patička -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 Jméno Experta. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Jednoduchý skript pro zobrazení kontaktních informací
+        function showContactInfo() {
+            const contactDiv = document.getElementById('contact-info');
+            contactDiv.classList.remove('hidden');
+        }
+
+        // Plynulé scrollování pro kotvy
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
